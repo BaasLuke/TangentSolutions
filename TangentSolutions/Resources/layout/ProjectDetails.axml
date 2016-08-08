@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silver">
+    <TextView
+        android:text="Project Details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textStyle="bold"
+        android:background="@color/silver"
+        android:shadowColor="@color/grey"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="1.5"
+        android:textColor="@color/blue"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProjectDetailsTitle"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:hint="Title"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/grey" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProjectDetailsDescription"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:hint="Description"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/grey" />
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tlIntro"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px">
+        <TableRow
+            android:id="@+id/trIntroButtons">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAddAppDateOfApp"
+                android:hint="Start Date"
+                android:layout_column="0"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/blue" />
+            <Spinner
+                android:spinnerMode="dialog"
+                android:layout_column="1"
+                android:id="@+id/spnStartDateDay"
+                style="@style/Theme.NoTitleBar.OccupationSpinners"
+                android:theme="@style/Theme.NoTitleBar.OccupationSpinners" />
+            <Spinner
+                android:spinnerMode="dialog"
+                android:layout_column="2"
+                android:id="@+id/spnStartDateMonth"
+                style="@style/Theme.NoTitleBar.OccupationSpinners"
+                android:theme="@style/Theme.NoTitleBar.OccupationSpinners" />
+            <Spinner
+                android:spinnerMode="dialog"
+                android:layout_column="3"
+                android:id="@+id/spnStartDateYear"
+                style="@style/Theme.NoTitleBar.OccupationSpinners"
+                android:theme="@style/Theme.NoTitleBar.OccupationSpinners" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/trIntroButtons">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAddAppDateOfApp"
+                android:hint="End Date"
+                android:layout_column="0"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/blue" />
+            <Spinner
+                android:spinnerMode="dialog"
+                android:layout_column="1"
+                android:id="@+id/spnEndDateDay"
+                style="@style/Theme.NoTitleBar.OccupationSpinners"
+                android:theme="@style/Theme.NoTitleBar.OccupationSpinners" />
+            <Spinner
+                android:spinnerMode="dialog"
+                android:layout_column="2"
+                android:id="@+id/spnEndDateMonth"
+                style="@style/Theme.NoTitleBar.OccupationSpinners"
+                android:theme="@style/Theme.NoTitleBar.OccupationSpinners" />
+            <Spinner
+                android:spinnerMode="dialog"
+                android:layout_column="3"
+                android:id="@+id/spnEndDateYear"
+                style="@style/Theme.NoTitleBar.OccupationSpinners"
+                android:theme="@style/Theme.NoTitleBar.OccupationSpinners" />
+        </TableRow>
+    </TableLayout>
+    <CheckBox
+        android:text="Is Active"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkIsActive"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/grey" />
+    <CheckBox
+        android:text="Is Billable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkIsBillable"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:textColor="@color/blue" />
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tlIntro"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px">
+        <TableRow
+            android:id="@+id/trIntroButtons"
+            android:layout_marginTop="30dp">
+            <Button
+                android:layout_column="0"
+                android:text="Update"
+                android:layout_width="150.0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnProjectDetailsUpdate"
+                style="@style/Intro_button_layout"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/stylesheet" />
+            <Button
+                android:layout_column="1"
+                android:text="Delete"
+                android:layout_width="150.0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnProjectDetailsDelete"
+                style="@style/Intro_button_layout"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/stylesheet" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
