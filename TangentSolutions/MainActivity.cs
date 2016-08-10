@@ -37,8 +37,8 @@ namespace TangentSolutions
 			utils.pref = Application.Context.GetSharedPreferences("Session Data", FileCreationMode.Private);
 			utils.edit = utils.pref.Edit();
 
-			txtUsername.Text = "admin";
-			txtPassword.Text = "admin";
+			//txtUsername.Text = "admin";
+			//txtPassword.Text = "admin";
 
 			btnLogin.Click += (sender, e) =>
 			{
@@ -150,8 +150,8 @@ namespace TangentSolutions
 				try
 				{
 					Person person = new Person();
-					person.Username = "admin";
-					person.Password = "admin";
+					person.Username = utils.pref.GetString("Username", null);//"admin";
+					person.Password = utils.pref.GetString("Password", null);//"admin";
 
 					var client = new RestClient("http://userservice.staging.tangentmicroservices.com/api-token-auth/");
 					var request = new RestRequest(Method.POST);
